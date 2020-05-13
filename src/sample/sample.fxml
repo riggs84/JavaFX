@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ComboBox?>
+<VBox prefHeight="188.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <children>
+      <Pane prefHeight="186.0" prefWidth="640.0">
+         <children>
+            <ComboBox fx:id="choiceBox" promptText="Выберите БИН" layoutX="29.0" layoutY="32.0" prefHeight="29.0" prefWidth="263.0">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="Авангард-478273" />
+                     <String fx:value="Банк Русский Стандарт-417251" />
+                     <String fx:value="БИНБАНК-465005" />
+                     <String fx:value="ВТБ-427229" />
+                     <String fx:value="Райффайзенбанк-447603" />
+                     <String fx:value="Сбербанк-427609" />
+                     <Separator fx:id="masterCard"/>
+                     <String fx:value="Авангард-522223" />
+                     <String fx:value="Авангард-522224" />
+                     <String fx:value="БИНБАНК-538110" />
+                     <String fx:value="ВТБ-529884" />
+                     <String fx:value="Сбербанк-546972" />
+                     <Separator fx:id="americanExpress"/>
+                     <String fx:value="AmericanExpress-378230" />
+                     <Separator fx:id="mir"/>
+                     <String fx:value="МИР-220220" />
+                     <String fx:value="МИР-220077" />
+                  </FXCollections>
+               </items>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ComboBox>
+            <TextField fx:id="cardLengthField" layoutX="351.0" layoutY="32.0" prefHeight="29.0" prefWidth="188.0" promptText="Длинна номера карты" />
+            <Button fx:id="generateButton" blendMode="DARKEN" defaultButton="true" layoutX="353.0" layoutY="97.0" mnemonicParsing="false" onAction="#generateCardNumber" prefHeight="47.0" prefWidth="188.0" style="-fx-background-color: #B0C4DE#B0C4DE;" text="Generate Card Number" textAlignment="JUSTIFY" underline="true">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TextField fx:id="resultField" editable="false" visible="false" layoutX="27.0" layoutY="95.0" prefHeight="47.0" prefWidth="263.0" promptText="Поле вывода номера сгенерированной карты" />
+         </children>
+      </Pane>
+  </children>
+</VBox>
